@@ -1,14 +1,14 @@
-import React from 'react';
-
-const SelectPercentage = ({ text }) => {
+const SelectPercentage = ({ text, onSetPercentage, percentage }) => {
 	return (
 		<div>
-			<span>{text}</span>
-			<select>
+			<label>{text}</label>
+			<select
+				value={percentage}
+				onChange={(e) => onSetPercentage(Number(e.target.value))}>
 				<option value='0'>Disatisfied (0%)</option>
-				<option value='0'>It was Okay (5%)</option>
-				<option value='0'>It was Good (10%)</option>
-				<option value='0'>Absolutly Amazing! (20%)</option>
+				<option value='5'>It was Okay (5%)</option>
+				<option value='10'>It was Good (10%)</option>
+				<option value='20'>Absolutly Amazing! (20%)</option>
 			</select>
 		</div>
 	);
