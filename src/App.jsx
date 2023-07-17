@@ -20,15 +20,15 @@ function App() {
 		<div>
 			<BillInput bill={bill} setBill={setBill} />
 			<SelectPercentage
-				text='How did you like the service? '
 				percentage={percentage1}
-				onSetPercentage={setPercentage1}
-			/>
+				onSetPercentage={setPercentage1}>
+				How did you like the service?
+			</SelectPercentage>
 			<SelectPercentage
 				percentage={percentage2}
-				onSetPercentage={setPercentage2}
-				text='How did your friend like the service? '
-			/>
+				onSetPercentage={setPercentage2}>
+				 How did your friend like the service?
+			</SelectPercentage>
 			{bill && (
 				<div>
 					<h1>

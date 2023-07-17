@@ -1,7 +1,7 @@
-const SelectPercentage = ({ text, onSetPercentage, percentage }) => {
+const SelectPercentage = ({ onSetPercentage, percentage, children }) => {
 	return (
 		<div>
-			<label>{text}</label>
+			<label>{children}</label>
 			<select
 				value={percentage}
 				onChange={(e) => onSetPercentage(Number(e.target.value))}>
